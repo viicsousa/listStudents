@@ -1,0 +1,62 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.cadastro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+p {
+  text-decoration: underline;
+  color: blue;
+  font-size: medium;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+p:hover {
+  color: red; 
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
