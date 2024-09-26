@@ -1,18 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { environment } from '../environments/environment';
+import { StudentsService } from './services/students.service';
+import { Student } from '../models/student.model';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'] // Corrigi de styleUrl para styleUrls
 })
 export class AppComponent {
   title = 'listStudents';
+  listas: Student[] = [];
+  private _student : StudentsService;
+  constructor(studentService: StudentsService) 
+  
+  { this._student = studentService;
+    this.listaCadastrada(); // Chame o método no construtor
+  }
 
-  constructor(){
-    console.log(environment.api)
+  listaCadastrada() {
+    this._student.listStudent()
+      .subscribe(listas => this.listas = listas);
   }
 }
